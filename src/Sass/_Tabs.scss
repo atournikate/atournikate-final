@@ -1,0 +1,74 @@
+@import "Var";
+
+.Tabs {
+  display: block;
+
+  ul {
+    list-style-type: none;
+  }
+
+  .nav {
+    display: flex;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: $white;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      border-bottom: 1px solid $slate;
+      left: 550px;
+      width: 100%;
+    }
+
+    li {
+      min-width: 110px;
+      max-height: 100%;
+      cursor: pointer;
+      align-items: center;
+      padding: 15px 20px 2px 20px;
+      background-color: $grey;
+      border-left: 1px solid $slate;
+      border-top: 1px solid $slate;
+      border-right: 1px solid $slate;
+      border-bottom: 1px solid $slate;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      font-family: "Raleway";
+      transition: 0.3s;
+
+      &:hover {
+        background-color: lighten($grey, 20%);
+        font-weight: bolder;
+      }
+
+      &.active {
+        animation: fadeEffect 1s ease;
+        background-color: $white;
+        border-bottom: 1px solid $white;
+      }
+    }
+  }
+
+  .content {
+    margin-top: 0;
+    padding: 20px;
+    animation: fadeEffect 1s ease;
+    background-color: $white;
+  }
+  @keyframes fadeEffect {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .content-container {
+    margin: 30px;
+    background-color: lighten($salmon, 20%);
+  }
+}

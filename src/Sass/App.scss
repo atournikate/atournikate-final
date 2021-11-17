@@ -1,0 +1,20 @@
+@import "Var";
+@import "Hero";
+@import "Tabs";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $blue;
+  color: $black;
+  font-family: $type-regular;
+  line-height: 1.6;
+}
+
+.App {
+  width: 100vw;
+}
