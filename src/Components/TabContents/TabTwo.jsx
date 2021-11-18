@@ -187,11 +187,7 @@ const TabTwo = () => {
   const filledStars = (level) => {
     return (
       <div className="starline">
-        <Star />
-        <Star />
-        <Star />
-        <Star />
-        <Star />
+        
       </div>
       
     )
