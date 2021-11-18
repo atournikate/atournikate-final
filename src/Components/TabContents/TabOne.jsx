@@ -9,7 +9,7 @@ const TabOne = () => {
       description: [
         {
           department: "",
-          tasks: "",
+          tasks: [""],
         },
       ],
     },
@@ -22,7 +22,7 @@ const TabOne = () => {
       description: [
         {
           department: "",
-          tasks: "",
+          tasks: [""],
         },
       ],
     },
@@ -44,7 +44,9 @@ const TabOne = () => {
         },
         {
           department: "Geotechnical Services",
-          tasks: ["Construction monitoring", "Groundwater monitoring"],
+          tasks: [
+            "Construction monitoring", "Groundwater monitoring"
+          ],
         },
       ],
     },
@@ -57,7 +59,7 @@ const TabOne = () => {
       description: [
         {
           department: "",
-          tasks: "",
+          tasks: [""],
         },
       ],
     },
@@ -97,7 +99,7 @@ const TabOne = () => {
       description: [
         {
           department: "",
-          tasks: "",
+          tasks: [""],
         },
      ],
     },
@@ -110,7 +112,7 @@ const TabOne = () => {
       description: [
         {
           department: "Geotechnical Services",
-          tasks: "Construction monitoring",
+          tasks: ["Construction monitoring"],
         },
       ],
     },
@@ -123,23 +125,48 @@ const TabOne = () => {
       description: [
         {
           department: "",
-          tasks: "",
+          tasks: [""],
         },
      ],
     },
 ];
 
+const taskCallback = (task) => {
+  return task();
+};
+
 
   return (
     <div className="Tab1">
-      
+
        {career.map((entry) => (
          <div className="content-container">
-           <p>{entry.year}</p>
+           <p className="career">{entry.year}</p>
            
+           <p className="job">
+             <span>{entry.title}</span>
+             {entry.company} 
+              {entry.location}
+           </p>
 
             {entry.description.map((item) => (
-              <p>{item.department}</p>
+              <ul className="job">
+                <li>{item.department}
+                <ul>
+                  {
+                    taskCallback(
+                      () => {
+                        const task = [];
+                        for (let i = 0; i < item.tasks.length; i++) {
+                          task.push(<li>{item.tasks[i]}</li>)
+                        }
+                        return task;
+                      }
+                    )
+                  }
+                </ul>
+                </li>
+              </ul>
             ))}
          
          
