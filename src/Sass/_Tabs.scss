@@ -67,8 +67,30 @@
     }
   }
 
-  .content-container {
-    margin: 30px;
-    background-color: lighten($salmon, 20%);
+  .Tab1 {
+    margin: 20px;
+      padding: 30px;
+      background-color: lighten($salmon, 20%);
+
+    .content-container {
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+  
+      .career {
+        margin-right: auto;
+      }
+  
+      .job {
+        margin-left: auto;
+        text-align: right;
+  
+        span {
+          font-family: $type-bold;
+        }
+      }
+    }
   }
+  
 }

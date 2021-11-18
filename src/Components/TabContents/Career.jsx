@@ -1,5 +1,3 @@
-import React from "react";
-
 const Career = [
   {
     year: "04/2021 – 12/2021",
