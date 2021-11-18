@@ -17,12 +17,12 @@ const TabOne = () => {
       id: "Zuri",
       year: "10/2019 – 03/2021",
       title: "",
-      company: "",
+      company: "Acclimatization in Switzerland and language acquisition",
       location: "",
       description: [
         {
           department: "",
-          tasks: "Acclimatization in Switzerland and language acquisition",
+          tasks: "",
         },
       ],
     },
@@ -52,12 +52,12 @@ const TabOne = () => {
       id: "USA",
       year: "04/2015 – 06/2015",
       title: "",
-      company: "",
+      company: "Return to the USA",
       location: "",
       description: [
         {
           department: "",
-          tasks: "Return to the USA",
+          tasks: "",
         },
       ],
     },
@@ -92,12 +92,14 @@ const TabOne = () => {
       id: "Canada",
       year: "2008",
       title: "",
-      company: "",
+      company: "Moved to Canada",
       location: "",
-      description: {
-        department: "",
-        tasks: "Moved to Canada",
-      },
+      description: [
+        {
+          department: "",
+          tasks: "",
+        },
+     ],
     },
     {
       id: "AESI1",
@@ -116,55 +118,39 @@ const TabOne = () => {
       id: "Japan",
       year: "2004 – 2005",
       title: "",
-      company: "",
+      company: "Study Abroad in Kyoto, Japan",
       location: "",
-      description: {
-        department: "",
-        tasks: "Study Abroad in Kyoto, Japan",
-      },
+      description: [
+        {
+          department: "",
+          tasks: "",
+        },
+     ],
     },
 ];
 
+
   return (
     <div className="Tab1">
-        {career.map((entry) => (
-          <div className="content-container">
+      
+       {career.map((entry) => (
+         <div className="content-container">
+           <p>{entry.year}</p>
+           
 
-          <p  className="career">{ entry.year }</p>
-
-          <ul className="job">
-            <li>
-              <span>{ entry.title }</span> {entry.company} {entry.location}
-            </li>
-            
-          </ul>
-          
-          </div>
-
-
-        ))}
-
-          
+            {entry.description.map((item) => (
+              <p>{item.department}</p>
+            ))}
          
-        
-
-
-      
-
-
-      
-
-
-
-
-
-
-
-
-
-
+         
+         </div>
+         
+       )
+      )}
 
     </div> 
+
+    
   );
 };
 
