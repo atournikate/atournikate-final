@@ -184,10 +184,25 @@ const TabTwo = () => {
         ]},
   ];
 
+  const filledStars = (level) => {
+    return (
+      <div className="starline">
+        <Star />
+        <Star />
+        <Star />
+        <Star />
+        <Star />
+      </div>
+      
+    )
+  }
+
 
   return (
     <div className="Tab2">
-      <Star height={25} width={25}/>
+      {filledStars(() => {
+        return filledStars;
+      })}
 
       {skills.filter(category => category.id === "Languages").map((lang) => (
 
