@@ -6,7 +6,7 @@ import TabFour from "./TabContents/TabFour";
 import TabFive from "./TabContents/TabFive";
 
 const Tabs = () => {
-  const [activeTab, setActiveTab] = useState("Tab1");
+  const [activeTab, setActiveTab] = useState("Tab2");
 
   return (
     <div className="Tabs">

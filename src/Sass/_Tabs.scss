@@ -1,4 +1,9 @@
 @import "Var";
+@import "Tab1";
+@import "Tab2";
+@import "Tab3";
+@import "Tab4";
+@import "Tab5";
 
 .Tabs {
   display: block;
@@ -66,52 +71,5 @@
       opacity: 1;
     }
   }
-
-  .Tab1 {
-    margin: 20px;
-      padding: 30px;
-      background-color: lighten($salmon, 20%);
-
-    .content-container {
-      
-      display: flex;
-      flex-direction: column;
-      
-      .entry {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        border-top: 1px solid $black;
-      
-        li {
-          max-width: 50ch;
-          padding: 10px;
-        }
-        #years {
-          margin-left: 0;
-          justify-self: left;
-        }
-
-        #titles {
-          font-family: $type-bold;
-        }
-      }
-      
-      .job {
-        margin-left: auto;
-        text-align: left;
-        width: 45ch;
-  
-        .tasks {
-         font-family: $type-light;
-         margin-left: auto;
-         text-align: justify;
-         width: 40ch;
-        }
-      }
-    }
-  }
-
-  
   
 }

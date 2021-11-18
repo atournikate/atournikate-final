@@ -1,0 +1,109 @@
+.Tabs {
+    .Tab1 {
+        margin: 20px;
+          padding: 30px;
+          background-color: lighten($salmon, 20%);
+    
+    
+        .keyLine {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 50vw;
+          text-align: center;
+          font-family: $sans;
+        }
+    
+        .content-container {
+          display: flex;
+          flex-direction: column;
+          
+          .entry {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border-top: 1px solid $black;
+          
+            li {
+              width: 50vw;
+              padding: 10px;
+            }
+            #years {
+              margin-left: 0;
+              justify-self: left;
+            }
+    
+            #titles {
+              font-family: $type-bold;
+            }
+          }
+          .Tab1 {
+            margin: 20px;
+            padding: 30px;
+            background-color: lighten($salmon, 20%);
+        
+        
+            .keyLine {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              width: 50vw;
+              text-align: center;
+              font-family: $sans;
+            }
+        
+            .content-container {
+              display: flex;
+              flex-direction: column;
+              
+              .entry {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                border-top: 1px solid $black;
+              
+                li {
+                  width: 50vw;
+                  padding: 10px;
+                }
+                #years {
+                  margin-left: 0;
+                  justify-self: left;
+                }
+        
+                #titles {
+                  font-family: $type-bold;
+                }
+              }
+              
+              .job {
+                margin-left: auto;
+                text-align: left;
+                width: 40vw;
+          
+                .tasks {
+                 font-family: $type-light;
+                 margin-left: auto;
+                 text-align: justify;
+                 width: 35vw;
+                }
+              }
+            }
+          }
+        
+          .job {
+            margin-left: auto;
+            text-align: left;
+            width: 40vw;
+      
+            .tasks {
+             font-family: $type-light;
+             margin-left: auto;
+             text-align: justify;
+             width: 35vw;
+            }
+          }
+        }
+      }
+    
+}
