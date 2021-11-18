@@ -3,8 +3,8 @@ const TabOne = () => {
     {
       id: "Opportunity",
       year: "04/2021 – 12/2021",
-      title: "Junior Web Developer,",
-      company: "Training Program, Opportunity,",
+      title: "Junior Web Developer, ",
+      company: "Training Program, Opportunity, ",
       location: "Zürich",
       description: [
         {
@@ -29,8 +29,8 @@ const TabOne = () => {
     {
       id: "AESI2",
       year: "07/2015 – 09/2019",
-      title: "Geological & Environmental Technician,",
-      company: "Associated Earth Sciences, Inc.,",
+      title: "Geological & Environmental Technician, ",
+      company: "Associated Earth Sciences, Inc., ",
       location: "USA",
       description: [
         {
@@ -66,8 +66,8 @@ const TabOne = () => {
     {
       id: "EXP",
       year: "07/2008 – 03/2015",
-      title: "Geological & Environmental Technician,",
-      company: "exp Services Inc,",
+      title: "Geological & Environmental Technician, ",
+      company: "exp Services Inc, ",
       location: "Canada",
       description: [
         {
@@ -106,8 +106,8 @@ const TabOne = () => {
     {
       id: "AESI1",
       year: "05/2005 – 06/2008",
-      title: "Geological Technician,",
-      company: "Associated Earth Sciences, Inc,",
+      title: "Geological Technician, ",
+      company: "Associated Earth Sciences, Inc, ",
       location: "",
       description: [
         {
@@ -141,30 +141,30 @@ const taskCallback = (task) => {
 
        {career.map((entry) => (
          <div className="content-container">
-           <p className="career">{entry.year}</p>
-           
-           <p className="job">
-             <span>{entry.title}</span>
-             {entry.company} 
-              {entry.location}
-           </p>
+          
+             <ul className="entry">
+               <li id="years">{entry.year}</li>
+               <li><span id="titles">{entry.title}</span>
+                {entry.company} 
+                {entry.location}</li>
+             </ul>
 
             {entry.description.map((item) => (
               <ul className="job">
                 <li>{item.department}
-                <ul>
-                  {
-                    taskCallback(
-                      () => {
-                        const task = [];
-                        for (let i = 0; i < item.tasks.length; i++) {
-                          task.push(<li>{item.tasks[i]}</li>)
+                  <ul className="tasks">
+                    {
+                      taskCallback(
+                        () => {
+                          const task = [];
+                          for (let i = 0; i < item.tasks.length; i++) {
+                            task.push(<li>{item.tasks[i]}</li>)
+                          }
+                          return task;
                         }
-                        return task;
-                      }
-                    )
-                  }
-                </ul>
+                      )
+                    }
+                  </ul>
                 </li>
               </ul>
             ))}

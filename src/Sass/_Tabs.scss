@@ -46,8 +46,8 @@
 
       &.active {
         animation: fadeEffect 1s ease;
-        background-color: $white;
-        border-bottom: 1px solid $white;
+        background-color: $grey;
+        border-bottom: 1px solid $grey;
       }
     }
   }
@@ -56,7 +56,7 @@
     margin-top: 0;
     padding: 20px;
     animation: fadeEffect 1s ease;
-    background-color: $white;
+    background-color: $grey;
   }
   @keyframes fadeEffect {
     from {
@@ -76,21 +76,42 @@
       
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
-  
-      .career {
-        margin-right: auto;
+      
+      .entry {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-top: 1px solid $black;
+      
+        li {
+          max-width: 50ch;
+          padding: 10px;
+        }
+        #years {
+          margin-left: 0;
+          justify-self: left;
+        }
+
+        #titles {
+          font-family: $type-bold;
+        }
       }
-  
+      
       .job {
         margin-left: auto;
-        text-align: right;
+        text-align: left;
+        width: 45ch;
   
-        span {
-          font-family: $type-bold;
+        .tasks {
+         font-family: $type-light;
+         margin-left: auto;
+         text-align: justify;
+         width: 40ch;
         }
       }
     }
   }
+
+  
   
 }
