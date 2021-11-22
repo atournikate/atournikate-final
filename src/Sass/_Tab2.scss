@@ -3,7 +3,29 @@
         margin: 20px;
         padding: 30px;
         background-color: lighten($blue, 30%);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
 
+
+        .starLine {
+            display: flex;
+            .star {
+                width: 1.5em;
+                height: 1.5em;
+            }
+        }
+
+        .col1 {
+            flex-grow: 1;
+            .itSkills, .programming {
+                margin-top: 20px;
+            }
+        }
+
+        .col2 {
+            flex-grow: 2;
+        }
         
 
         
