@@ -3,7 +3,36 @@
         margin: 20px;
         padding: 30px;
         background-color: lighten($salmon, 20%);
+        
 
+        .paperclip2 {
+            width: 100px;
+            position: absolute;
+            right: -2px;
+            margin-left: auto;
+
+            img {
+                transform: rotate(40deg);
+                width: 100%;
+                z-index: 999;
+                ;
+            }
+        }
+
+        .polaroid {
+            display: flex;
+            position: relative;
+            bottom: -50px;
+
+            img {
+                width: 300px;
+
+            }
+            
+            
+        }
+        
+        
         
     }
 }
