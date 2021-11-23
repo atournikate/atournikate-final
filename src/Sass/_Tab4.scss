@@ -1,36 +1,82 @@
+@import "Var";
+
 .Tabs {
     .Tab4 {
         margin: 20px;
         padding: 30px;
         background-color: lighten($salmon, 20%);
-        
 
         .paperclip2 {
             width: 100px;
             position: absolute;
-            right: -2px;
-            margin-left: auto;
-
+            right: -6px;
+            z-index: 10;
             img {
-                transform: rotate(40deg);
+                transform: rotate(70deg);
                 width: 100%;
-                z-index: 999;
-                ;
             }
         }
-
+        
         .polaroid {
-            display: flex;
+            display: grid;
             position: relative;
-            bottom: -50px;
+            grid-template-columns: repeat(12, 1fr);
+                     
+            .photo {
+                position: relative;
+                
+                img {
+                    display: block;
+                    width: 300px;
+                }
 
-            img {
-                width: 300px;
+                p {
+                    font-family: $hand;
+                    font-size: 1.25em;
+                    position: absolute; 
+                    bottom: 20px;
+                    padding: 5px;
+                }
 
+            }
+
+            .active {
+                z-index: 5;
+            }
+
+
+            #p1 {
+                position: absolute;
+                grid-column: 10;
+                right: -60px;
+                grid-row: 1;
+                margin-top: -5em;
+                transform: rotate(1deg);
+                
+            }
+    
+            #p2 {
+                position: absolute;
+                grid-column: 10;
+                right: -20px;
+                grid-row: 1;
+                transform: rotate(-2deg);
+                
+            }
+            
+            #p3 {
+                position: absolute;
+                grid-column: 12;
+                right: 0;
+                grid-row: 1;
+                margin-top: -3em;    
+                transform: rotate(-6deg);
+                
             }
             
             
         }
+
         
         
         

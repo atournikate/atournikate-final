@@ -139,8 +139,8 @@ const taskCallback = (task) => {
   return (
     <div className="Tab1">
       <ul className="keyLine">
-        <li>Datum</li>
-        <li>Gegenstand</li>
+        <li>Dates</li>
+        <li>Details</li>
       </ul>
        {career.map((entry) => (
          <div className="content-container">

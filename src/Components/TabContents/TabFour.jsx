@@ -1,8 +1,8 @@
+import React, { useState } from "react";
+
 const TabFour = () => {
-
-
-
-
+  const [topPhoto, setTopPhoto] = useState("");
+  
   return (
     <div className="Tab4">
       <div className="something">
@@ -14,15 +14,21 @@ const TabFour = () => {
       <div className="paperclip2">
         <img src="../images/pclip.png" alt="" />
       </div>
+      
       <div className="polaroid">
-        <div id="p1">
+
+
+        <div className={topPhoto === "p1" ? "photo active" : "photo"} onClick={() => {setTopPhoto("p1")}} id="p1">
           <img  src="../images/kf-interlaken.png" alt="" />
+          <p>mysterious man & woman - interlaken 2021</p>
         </div>
-        <div id="p2">
+        <div className={topPhoto === "p2" ? "photo active" : "photo"} onClick={() => {setTopPhoto("p2")}} id="p2">
           <img  src="../images/fr-zuri.png" alt="" />
+          <p>femme fatale ? - Zürich</p>
         </div>
-        <div id="p3">
+        <div className={topPhoto === "p3" ? "photo active" : "photo"} onClick={() => {setTopPhoto("p3")}} id="p3">
           <img src="../images/dar-ptrbts.png" alt=""  />
+          <p>shadowy figure - Pt. Roberts via Canada</p>
         </div>
       </div>
       

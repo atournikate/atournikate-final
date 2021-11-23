@@ -222,6 +222,7 @@ const TabTwo = () => {
                     <ul>
                       <li className="starLine">
                       {[1,2,3,4,5].map((index) => {
+                        
                         return (
                           <LevelIcon 
                           index={index}
