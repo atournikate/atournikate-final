@@ -207,113 +207,118 @@ const TabTwo = () => {
   return (
     <div className="Tab2">
 
-      <div className="col1">
+      <div className="content-container">
+    
 
-      {skills.filter(category => category.id === "Languages").map((lang) => (
-        <div className="language">
+          {skills.filter(category => category.id === "Languages").map((lang) => (
+            <div className="language">
 
-          <h3>{lang.id}</h3>
+              <h3>{lang.id}</h3>
 
-          {lang.items.map((skills) => (
-            <ul>
-              <li className="skillLevel">{skills.skill}
-             
+              {lang.items.map((skills) => (
                 <ul>
-                  <li className="starLine">
-                  {[1,2,3,4,5].map((index) => {
-                    return (
-                      <LevelIcon 
-                      index={index}
-                      level={skills.level}
-                      />
-                    )
-                  })}
-                  </li>
+                  <li className="skillLevel">{skills.skill}
+                
+                    <ul>
+                      <li className="starLine">
+                      {[1,2,3,4,5].map((index) => {
+                        return (
+                          <LevelIcon 
+                          index={index}
+                          level={skills.level}
+                          />
+                        )
+                      })}
+                      </li>
+                    </ul>
+                    </li>
                 </ul>
-                </li>
-            </ul>
+              ))}
+            
+            </div>
+
           ))}
-         
-        </div>
-      
-      ))}
 
-      {skills.filter(category => category.id === "IT Skills").map((it) => (
-        <div className="itSkills">
-          <h3>{it.id}</h3>
+            {skills.filter(category => category.id === "IT Skills").map((it) => (
+              <div className="itSkills">
+                <h3>{it.id}</h3>
 
-          {it.items.map((skills) => (
-            <ul>
-              <li className="skillLevel">
-                {skills.skill}
-                <ul>
-                  <li className="starLine">
-                  {[1,2,3,4,5].map((index) => {
-                    return (
-                      <LevelIcon 
-                      index={index}
-                      level={skills.level}
-                      />
-                    )
-                  })}
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          ))}
-        </div>
-      ))}
-
-
-      {skills.filter(category => category.id === "Programming Languages").map((program) =>(
-                    <div className="programming">
-                      <h3>{program.id}</h3>
-
-                      {program.items.map((skills) => (
-                        <ul>
-                          <li className="skillLevel">
-                            {skills.skill}
-                            <ul>
-                              <li className="starLine">
-                                {[1,2,3,4,5].map((index) => {
-                                  return (
-                                    <LevelIcon index={index} level={skills.level} />
-                                  )
-                                })}
-                              </li>
-                            </ul>
-                          </li>
-                        </ul>
-                      ))}
-                    </div>
+                {it.items.map((skills) => (
+                  <ul>
+                    <li className="skillLevel">
+                      {skills.skill}
+                      <ul>
+                        <li className="starLine">
+                        {[1,2,3,4,5].map((index) => {
+                          return (
+                            <LevelIcon 
+                            index={index}
+                            level={skills.level}
+                            />
+                          )
+                        })}
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                ))}
+              </div>
             ))}
 
 
-      </div>
-      <div className="col2">
-      {skills.filter(category => category.id === "Soft Skills").map((soft) =>(
-        <div className="softSkills">
-          <h3>{soft.id}</h3>
+            {skills.filter(category => category.id === "Programming Languages").map((program) =>(
+                          <div className="programming">
+                            <h3>{program.id}</h3>
 
-          {soft.items.map((skills) => (
-            <ul>
-              <li className="skillLevel">
-                {skills.skill}
-                <ul>
-                  <li className="starLine">
-                    {[1,2,3,4,5].map((index) => {
-                      return (
-                        <LevelIcon index={index} level={skills.level} />
-                      )
-                    })}
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          ))}
+                            {program.items.map((skills) => (
+                              <ul>
+                                <li className="skillLevel">
+                                  {skills.skill}
+                                  <ul>
+                                    <li className="starLine">
+                                      {[1,2,3,4,5].map((index) => {
+                                        return (
+                                          <LevelIcon index={index} level={skills.level} />
+                                        )
+                                      })}
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            ))}
+                          </div>
+                  ))}
+
+
+        
+
+        
+        {skills.filter(category => category.id === "Soft Skills").map((soft) =>(
+          <div className="softSkills">
+            <h3>{soft.id}</h3>
+
+            {soft.items.map((skills) => (
+              <ul>
+                <li className="skillLevel">
+                  {skills.skill}
+                  <ul>
+                    <li className="starLine">
+                      {[1,2,3,4,5].map((index) => {
+                        return (
+                          <LevelIcon index={index} level={skills.level} />
+                        )
+                      })}
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            ))}
+          </div>
+        ))}
         </div>
-      ))}
-      </div>
+
+
+      
 
       
 
