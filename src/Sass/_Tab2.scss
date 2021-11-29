@@ -3,7 +3,7 @@
         margin: 20px;
         padding: 30px;
         background-color: lighten($blue, 30%);
-       
+        min-height: 800px;
 
         .content-container {
             -webkit-column-count: 3;
@@ -12,9 +12,14 @@
             -webkit-column-gap: 4em;
             -moz-column-gap: 4em;
             column-gap: 4em;
+            li {
+                font-size: 1.2em;
+            }
       
                 .itSkills, .programming, .softSkills {
                     margin-top: 3em;
+
+                    
                 }        
             
         }
@@ -23,8 +28,8 @@
             display: flex;
 
             .star {
-                width: 1.5em;
-                height: 1.5em;
+                width: 1em;
+                height: 1em;
             }
         }
         

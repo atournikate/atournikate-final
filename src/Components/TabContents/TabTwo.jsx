@@ -94,10 +94,6 @@ const TabTwo = () => {
             level: 5,
           },
           {
-            skill: "Design",
-            level: 4,
-          },
-          {
             skill: "Dependability",
             level: 5,
           },
@@ -134,16 +130,20 @@ const TabTwo = () => {
             level: 5,
           },
           {
-            skill: "Stress Management",
-            level: 4,
-          },
-          {
             skill: "Introspection",
             level: 5,
           },
           {
             skill: "Acuity",
             level: 5,
+          },
+          {
+            skill: "Design",
+            level: 4,
+          },
+          {
+            skill: "Stress Management",
+            level: 4,
           },
         ]},
       {

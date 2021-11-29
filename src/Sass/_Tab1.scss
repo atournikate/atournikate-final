@@ -2,8 +2,8 @@
     .Tab1 {
         margin: 20px;
           padding: 30px;
-          background-color: lighten($salmon, 20%);
-          height: 1200px;
+          background-color: lighten($salmon, 15%);
+          min-height: 800px;
     
     
         .keyLine {
@@ -23,7 +23,7 @@
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            border-top: 1px solid $black;
+            border-top: 2px solid $salmon;
           
             li {
               width: 50vw;

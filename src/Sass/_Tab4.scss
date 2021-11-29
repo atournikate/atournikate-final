@@ -4,13 +4,68 @@
     .Tab4 {
         margin: 20px;
         padding: 30px;
-        background-color: lighten($salmon, 20%);
+        background-color: lighten($salmon, 15%);
+        
+
+        .hobbies {
+            background-image: url("../atournikate_sketches2.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+
+            .content-container {
+                position: relative;
+
+                &:nth-child(1) {
+                    position: absolute;
+                    left: 30%;
+                    bottom: -150px;
+                    transform: rotate(-5deg);
+                }
+                
+                &:nth-child(2) {
+                    position: absolute;
+                    left: 50%;
+                    bottom: -205px;
+                    transform: rotate(21deg);
+                }
+
+                &:nth-child(3) {
+                    position: absolute;
+                    bottom: -500px;
+                    transform: rotate(-2deg);
+                }
+                .content-card {
+                    background-color: $blue;
+                    margin: 20px;
+                    padding: 20px;
+                    width: 300px;
+                    height: 300px;
+                    font-family: "Reenie Beanie";
+                    box-shadow: 2px 5px 10px $dkblue;
+
+                    p {
+                        font-size: 2em;
+                        border-bottom: 1px solid $dkblue;
+                    }
+
+                    li {
+                        font-size: 1.5em;
+                    }
+
+                    
+                }
+            }
+        }
 
         .paperclip2 {
             width: 100px;
             position: absolute;
             right: -6px;
             z-index: 10;
+            margin-top: -15em;
             img {
                 transform: rotate(70deg);
                 width: 100%;
@@ -28,6 +83,7 @@
                 img {
                     display: block;
                     width: 300px;
+                    box-shadow: 2px 2px 7px $dkblue;
                 }
 
                 p {
@@ -50,7 +106,7 @@
                 grid-column: 10;
                 right: -60px;
                 grid-row: 1;
-                margin-top: -5em;
+                margin-top: -20em;
                 transform: rotate(1deg);
                 
             }
@@ -60,6 +116,7 @@
                 grid-column: 10;
                 right: -20px;
                 grid-row: 1;
+                margin-top: -15em;
                 transform: rotate(-2deg);
                 
             }
@@ -69,7 +126,8 @@
                 grid-column: 12;
                 right: 0;
                 grid-row: 1;
-                margin-top: -3em;    
+                margin-top: -3em; 
+                margin-top: -17em;   
                 transform: rotate(-6deg);
                 
             }

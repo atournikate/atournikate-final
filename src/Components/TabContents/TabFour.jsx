@@ -2,13 +2,59 @@ import React, { useState } from "react";
 
 const TabFour = () => {
   const [topPhoto, setTopPhoto] = useState("");
+
+  const hobbyList = [
+    {
+      id: "Drawing",
+      strength: [
+        "Imagination",
+        "Storytelling",
+        "Design",
+      ],
+    },
+    {
+      id: "DM in D&D",
+      strength: [
+        "Collaborative creativity",
+        "Planning",
+        "Team Management"
+      ]
+    },
+    {
+      id: "Listening to Podcasts",
+      strength: [
+        "Constantly learning",
+        "Wide interest and knowledge base",
+        "Insight and empathy"
+      ]
+    }
+  ]
+
+  const hobbyCallback = (strength) => {
+    return strength; 
+  }
   
   return (
     <div className="Tab4">
-      <div className="something">
-        <p>Drake Equation corpus callosum tingling of the spine bits of moving fluff inconspicuous motes of rock and gas science. Gathered by gravity great turbulent clouds stirred by starlight kindling the energy hidden in matter Jean-François Champollion Cambrian explosion. The sky calls to us paroxysm of global death with pretty stories for which there's little good evidence something incredible is waiting to be known with pretty stories for which there's little good evidence laws of physics.</p>
 
-        <p>Permanence of the stars culture dispassionate extraterrestrial observer hydrogen atoms another world galaxies. Billions upon billions two ghostly white figures in coveralls and helmets are softly dancing the sky calls to us vastness is bearable only through love not a sunrise but a galaxyrise trillion. A mote of dust suspended in a sunbeam something incredible is waiting to be known invent the universe emerged into consciousness rich in heavy atoms a mote of dust suspended in a sunbeam?</p>
+      <h3>Recreation and Known Associates</h3>
+
+      <div className="hobbies">
+        {hobbyList.map((entry) => (
+          <div className="content-container">
+
+            <div className="content-card">
+              <p>{entry.id}</p>
+              {entry.strength.map((item) => (
+                <ul className="strengths">
+                 <li>{item}</li>
+                  
+                </ul>
+              ))}
+
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className="paperclip2">

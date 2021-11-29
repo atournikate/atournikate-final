@@ -7,13 +7,15 @@
 
         .content-container {
             display: flex;
+            min-height: 800px;
 
             .card {
-                max-width: 45ch;
+                max-width: 40ch;
                 margin: 20px;
                 padding: 10px;
                 background-color: lighten($lavendar, 10%);
                 border-radius: 5px;
+                box-shadow: 2px 5px 10px $dkviolet;
 
                 a {
                     text-decoration: none;
