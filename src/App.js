@@ -1,3 +1,4 @@
+import React from 'react';
 import "./Sass/App.scss";
 import Hero from "./Components/Hero";
 import Tabs from "./Components/Tabs";
