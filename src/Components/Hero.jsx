@@ -19,7 +19,7 @@ const Hero = () => {
           <h1>Zürich</h1>
         </div>
         <div className="photo">
-          <img src="/images/akate-bw.png" alt="" />
+          <img src="" alt="" />
         </div>
       </div>
       <div className="paperclip">
